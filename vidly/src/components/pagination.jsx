@@ -6,6 +6,7 @@ export default class Pagination extends Component{
     
     render(){
         const pages=dash.range(0,(this.props.pagesCount /this.props.pageSize));
+      //  console.log(this.props.pagesCount , this.props.pageSize)
  
       return(
            <nav aria-label="Page navigation example">

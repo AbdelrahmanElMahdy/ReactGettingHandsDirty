@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Movies from './components/table'
+import Navbar from './components/Navbar'
+import {Route,Switch} from 'react-router-dom'
+import Movie from './components/movie'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+export default class App extends Component {
+    render(){
+        return (
+            <React.Fragment>
+                <Navbar/>
+                <Switch>
+                    <Route path="/movies/:title/" render={(props)=> {
+                       return   < Movie {...props} />}}
+                    />
+                   <Route  path='/movies' component={Movies} />
+                </Switch>
+            </React.Fragment>
+        )
+    }
 }
-
-export default App;
