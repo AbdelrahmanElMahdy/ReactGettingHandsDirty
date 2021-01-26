@@ -3,8 +3,8 @@ const Movie = (props) => {
      console.log("movie")
     return ( 
         <React.Fragment>
-            <h1>movie title {props.match.params.title}</h1> 
-            <button onClick={()=>{props.history.push("/movies")}} className="btn btn-prime btn">Save</button>
+            <h1>movie title: {props.match.params.title}</h1> 
+            <button onClick={()=>{props.history.push("/movies")}} className="btn btn-prime btn">show Movies</button>
         </React.Fragment>
         );
 

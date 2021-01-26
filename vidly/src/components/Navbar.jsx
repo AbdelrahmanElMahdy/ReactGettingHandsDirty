@@ -4,11 +4,9 @@ const Navbar = () => {
     return (  
             <nav className="navbar navbar-light bg-light">
                     <div className="container-fluid">
-                    <NavLink to="/home" >Vidly</NavLink>
-                    <NavLink to="/people" >people</NavLink>
-                    <NavLink to="/movies" >Movies</NavLink>
-
-                    
+                    <NavLink className="nav-item nav-link" to="/home" >Vidly</NavLink>
+                    <NavLink className="nav-item nav-link" to="/Customer" >people</NavLink>
+                    <NavLink className="nav-item nav-link" to="/movies" >Movies</NavLink>
                     </div>
                 </nav> 
             
